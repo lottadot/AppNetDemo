@@ -359,18 +359,10 @@
 			isa = PBXGroup;
 			children = (
 				34C18F741623BEC800D6A10C /* Classes */,
+				34C18F9F1623C69000D6A10C /* Controllers */,
 				34C18E5C1623BA8600D6A10C /* ANDAppDelegate.h */,
 				34C18E5D1623BA8600D6A10C /* ANDAppDelegate.m */,
-				34C18E651623BA8600D6A10C /* ANDFirstViewController.h */,
-				34C18E661623BA8600D6A10C /* ANDFirstViewController.m */,
-				34C18E681623BA8600D6A10C /* first.png */,
-				34C18E6A1623BA8600D6A10C /* first@2x.png */,
-				34C18E6C1623BA8600D6A10C /* ANDSecondViewController.h */,
-				34C18E6D1623BA8600D6A10C /* ANDSecondViewController.m */,
-				34C18E6F1623BA8600D6A10C /* second.png */,
-				34C18E711623BA8600D6A10C /* second@2x.png */,
-				34C18E731623BA8600D6A10C /* ANDFirstViewController.xib */,
-				34C18E761623BA8600D6A10C /* ANDSecondViewController.xib */,
+				34C18F9E1623C67600D6A10C /* Images */,
 				34C18E541623BA8600D6A10C /* Supporting Files */,
 			);
 			path = AppNetDemo;
@@ -597,6 +589,30 @@
 				34C18F931623C18400D6A10C /* ConstantList.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		34C18F9E1623C67600D6A10C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				34C18E681623BA8600D6A10C /* first.png */,
+				34C18E6A1623BA8600D6A10C /* first@2x.png */,
+				34C18E6F1623BA8600D6A10C /* second.png */,
+				34C18E711623BA8600D6A10C /* second@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		34C18F9F1623C69000D6A10C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34C18E651623BA8600D6A10C /* ANDFirstViewController.h */,
+				34C18E661623BA8600D6A10C /* ANDFirstViewController.m */,
+				34C18E6C1623BA8600D6A10C /* ANDSecondViewController.h */,
+				34C18E6D1623BA8600D6A10C /* ANDSecondViewController.m */,
+				34C18E731623BA8600D6A10C /* ANDFirstViewController.xib */,
+				34C18E761623BA8600D6A10C /* ANDSecondViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -899,6 +915,7 @@
 				INFOPLIST_FILE = "AppNetDemo/AppNetDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../Libraries\"/**",
 					"\"$(SRCROOT)/../Libraries/TestFlight-SDK\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -915,6 +932,7 @@
 				INFOPLIST_FILE = "AppNetDemo/AppNetDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/../Libraries\"/**",
 					"\"$(SRCROOT)/../Libraries/TestFlight-SDK\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
