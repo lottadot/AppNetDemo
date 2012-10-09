@@ -99,6 +99,8 @@
 		34C18F671623BE0100D6A10C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18F661623BE0100D6A10C /* SystemConfiguration.framework */; };
 		34C18F691623BE0700D6A10C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18F681623BE0700D6A10C /* QuartzCore.framework */; };
 		34C18F6B1623BE1700D6A10C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18F6A1623BE1700D6A10C /* MobileCoreServices.framework */; };
+		34C18F921623C14600D6A10C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C18F911623C14600D6A10C /* Constants.m */; };
+		34C18F9D1623C26C00D6A10C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18F9C1623C26C00D6A10C /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,6 +281,10 @@
 		34C18F661623BE0100D6A10C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		34C18F681623BE0700D6A10C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		34C18F6A1623BE1700D6A10C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		34C18F901623C14600D6A10C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Classes/Constants.h; sourceTree = "<group>"; };
+		34C18F911623C14600D6A10C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Classes/Constants.m; sourceTree = "<group>"; };
+		34C18F931623C18400D6A10C /* ConstantList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantList.h; path = Classes/ConstantList.h; sourceTree = "<group>"; };
+		34C18F9C1623C26C00D6A10C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C18F9D1623C26C00D6A10C /* libz.dylib in Frameworks */,
 				34C18F671623BE0100D6A10C /* SystemConfiguration.framework in Frameworks */,
 				34C18F6B1623BE1700D6A10C /* MobileCoreServices.framework in Frameworks */,
 				34C18F691623BE0700D6A10C /* QuartzCore.framework in Frameworks */,
@@ -334,6 +341,7 @@
 		34C18E4C1623BA8600D6A10C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34C18F9C1623C26C00D6A10C /* libz.dylib */,
 				34C18F6A1623BE1700D6A10C /* MobileCoreServices.framework */,
 				34C18F681623BE0700D6A10C /* QuartzCore.framework */,
 				34C18F661623BE0100D6A10C /* SystemConfiguration.framework */,
@@ -350,6 +358,7 @@
 		34C18E531623BA8600D6A10C /* AppNetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				34C18F741623BEC800D6A10C /* Classes */,
 				34C18E5C1623BA8600D6A10C /* ANDAppDelegate.h */,
 				34C18E5D1623BA8600D6A10C /* ANDAppDelegate.m */,
 				34C18E651623BA8600D6A10C /* ANDFirstViewController.h */,
@@ -580,6 +589,16 @@
 			name = TestFlight;
 			sourceTree = "<group>";
 		};
+		34C18F741623BEC800D6A10C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34C18F901623C14600D6A10C /* Constants.h */,
+				34C18F911623C14600D6A10C /* Constants.m */,
+				34C18F931623C18400D6A10C /* ConstantList.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -764,6 +783,7 @@
 				34C18F581623BD9500D6A10C /* AFIncrementalStore.m in Sources */,
 				34C18F591623BD9500D6A10C /* AFRESTClient.m in Sources */,
 				34C18F5D1623BDAB00D6A10C /* MBProgressHUD.m in Sources */,
+				34C18F921623C14600D6A10C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +901,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Libraries/TestFlight-SDK\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -896,6 +917,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Libraries/TestFlight-SDK\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
