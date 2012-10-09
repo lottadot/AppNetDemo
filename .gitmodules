@@ -1,0 +1,15 @@
+[submodule "Libraries/appnetkit"]
+	path = Libraries/appnetkit
+	url = https://github.com/brentdax/appnetkit.git
+[submodule "Libraries/AFNetworking"]
+	path = Libraries/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Libraries/AFIncrementalStore"]
+	path = Libraries/AFIncrementalStore
+	url = https://github.com/AFNetworking/AFIncrementalStore.git
+[submodule "Libraries/TestFlight-SDK"]
+	path = Libraries/TestFlight-SDK
+	url = git://github.com/danielctull-forks/TestFlight-SDK.git
+[submodule "Libraries/MBProgressHUD"]
+	path = Libraries/MBProgressHUD
+	url = https://github.com/jdg/MBProgressHUD.git
