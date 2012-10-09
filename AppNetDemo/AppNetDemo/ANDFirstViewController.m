@@ -7,9 +7,11 @@
 //
 
 #import "ANDFirstViewController.h"
+#import "AppNetKit.h"
 
 @interface ANDFirstViewController ()
 
+@property (strong, nonatomic) NSString *authToken;
 @end
 
 @implementation ANDFirstViewController
@@ -27,13 +29,45 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSURL *redirectURL = [NSURL URLWithString:kAppDotNetCallbackURL];
+    [[ANAuthenticator sharedAuthenticator] setClientID:kAppDotNetClientID];
+    [[ANAuthenticator sharedAuthenticator] setRedirectURL:redirectURL];
+    
+    NSArray *scopes = [NSArray arrayWithObjects:ANScopeStream, ANScopeEmail, ANScopeWritePost, ANScopeFollow, ANScopeMessages, ANScopeExport, nil];
+    NSURL *url = [[ANAuthenticator sharedAuthenticator] URLToAuthenticateForScopes:scopes];
+    NSLog(@"URLToAuthenticateForScopes:%@", [url absoluteString]);
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:webView];
+    [webView setDelegate:self];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];   
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView*)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView*)webView {
+}
+
+- (void)webViewDidFinishLoad:(UIWebView*)webView {
+}
+
+- (void)webView:(UIWebView*)webView didFailLoadWithError:(NSError*)error {
+}
+
 
 @end
