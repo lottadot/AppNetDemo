@@ -68,4 +68,10 @@
 }
 */
 
+// https://[your registered redirect URI]/#access_token=[user access token]
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@"application handleOpenURL:%@", [url absoluteString]);
+    return YES;
+}
+
 @end
