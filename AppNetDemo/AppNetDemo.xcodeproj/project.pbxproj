@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345B385C1623D66C008E4B4A /* ANDPostTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345B385B1623D66C008E4B4A /* ANDPostTableCell.m */; };
+		345B385E1623D698008E4B4A /* ANDPostTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345B385D1623D698008E4B4A /* ANDPostTableCell.xib */; };
 		34C18E4E1623BA8600D6A10C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18E4D1623BA8600D6A10C /* UIKit.framework */; };
 		34C18E501623BA8600D6A10C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18E4F1623BA8600D6A10C /* Foundation.framework */; };
 		34C18E521623BA8600D6A10C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C18E511623BA8600D6A10C /* CoreGraphics.framework */; };
@@ -114,6 +116,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		345B385A1623D66C008E4B4A /* ANDPostTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ANDPostTableCell.h; path = Classes/ANDPostTableCell.h; sourceTree = "<group>"; };
+		345B385B1623D66C008E4B4A /* ANDPostTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ANDPostTableCell.m; path = Classes/ANDPostTableCell.m; sourceTree = "<group>"; };
+		345B385D1623D698008E4B4A /* ANDPostTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ANDPostTableCell.xib; path = Classes/ANDPostTableCell.xib; sourceTree = "<group>"; };
 		34C18E491623BA8600D6A10C /* AppNetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C18E4D1623BA8600D6A10C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		34C18E4F1623BA8600D6A10C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -607,10 +612,13 @@
 			children = (
 				34C18E651623BA8600D6A10C /* ANDFirstViewController.h */,
 				34C18E661623BA8600D6A10C /* ANDFirstViewController.m */,
+				34C18E731623BA8600D6A10C /* ANDFirstViewController.xib */,
 				34C18E6C1623BA8600D6A10C /* ANDSecondViewController.h */,
 				34C18E6D1623BA8600D6A10C /* ANDSecondViewController.m */,
-				34C18E731623BA8600D6A10C /* ANDFirstViewController.xib */,
 				34C18E761623BA8600D6A10C /* ANDSecondViewController.xib */,
+				345B385A1623D66C008E4B4A /* ANDPostTableCell.h */,
+				345B385B1623D66C008E4B4A /* ANDPostTableCell.m */,
+				345B385D1623D698008E4B4A /* ANDPostTableCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -698,6 +706,7 @@
 				34C18E751623BA8600D6A10C /* ANDFirstViewController.xib in Resources */,
 				34C18E781623BA8600D6A10C /* ANDSecondViewController.xib in Resources */,
 				34C18F351623BD6C00D6A10C /* README.md in Resources */,
+				345B385E1623D698008E4B4A /* ANDPostTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +809,7 @@
 				34C18F591623BD9500D6A10C /* AFRESTClient.m in Sources */,
 				34C18F5D1623BDAB00D6A10C /* MBProgressHUD.m in Sources */,
 				34C18F921623C14600D6A10C /* Constants.m in Sources */,
+				345B385C1623D66C008E4B4A /* ANDPostTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,6 +1004,7 @@
 				34C18E921623BA8700D6A10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34C18E931623BA8700D6A10C /* Build configuration list for PBXNativeTarget "AppNetDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -1002,6 +1013,7 @@
 				34C18E951623BA8700D6A10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
